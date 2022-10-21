@@ -19,7 +19,7 @@ RUN chmod 400 /root/.ssh/id_rsa.pub
 RUN touch /root/.ssh/config
 RUN chmod 700 /root/.ssh/config
 RUN echo $'Host git \n HostName github.com \n AddKeysToAgent yes \n PreferredAuthentications publikey \n IdentityFile /root/.ssh/id_rsa' > /root/.ssh/config
-RUN git clone git@github.com:demenciusz/docker.get .
+RUN git clone git@github.com:demenciusz/docker.git .
 RUN npm install
 
 CMD ["npm","start"]
